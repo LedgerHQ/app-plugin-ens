@@ -1,15 +1,5 @@
 #include "ens_plugin.h"
 
-static bool find_selector(uint32_t selector, const uint32_t *selectors, size_t n, selector_t *out) {
-    for (selector_t i = 0; i < n; i++) {
-        if (selector == selectors[i]) {
-            *out = i;
-            return true;
-        }
-    }
-    return false;
-}
-
 // Called once to init.
 void handle_init_contract(ethPluginInitContract_t *msg) {
     // Make sure we are running a compatible version.
