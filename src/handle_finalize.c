@@ -1,4 +1,4 @@
-#include "ens_plugin.h"
+#include "plugin.h"
 
 void handle_finalize(ethPluginFinalize_t *msg) {
     context_t *context = (context_t *) msg->pluginContext;
@@ -35,6 +35,9 @@ void handle_finalize(ethPluginFinalize_t *msg) {
             break;
         case MULTICALL:
             msg->numScreens = context->tx.body.multicall.n_calls;
+            break;
+        case REGISTER_2:
+            msg->numScreens = 7;
             break;
         default:
             msg->result = ETH_PLUGIN_RESULT_ERROR;

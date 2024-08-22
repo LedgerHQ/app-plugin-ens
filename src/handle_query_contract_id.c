@@ -1,4 +1,4 @@
-#include "ens_plugin.h"
+#include "plugin.h"
 
 // Sets the first screen to display.
 void handle_query_contract_id(ethQueryContractID_t *msg) {
@@ -7,13 +7,14 @@ void handle_query_contract_id(ethQueryContractID_t *msg) {
     // msg->version will be the lower sentence displayed on the screen.
 
     // For the first screen, display the plugin name.
-    strlcpy(msg->name, PLUGIN_NAME, msg->nameLength);
+    strlcpy(msg->name, APPNAME, msg->nameLength);
 
     switch (context->selectorIndex) {
         case COMMIT:
             strlcpy(msg->version, "Commit", msg->versionLength);
             break;
         case REGISTER:
+        case REGISTER_2:
             strlcpy(msg->version, "Register", msg->versionLength);
             break;
         case REGISTER_WITH_CONFIG:
