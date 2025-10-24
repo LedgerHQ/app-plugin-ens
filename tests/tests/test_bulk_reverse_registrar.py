@@ -7,52 +7,48 @@ contract_reverse_registrar = load_contract(
 )
 
 # From : https://etherscan.io/tx/0x905e106763556d0cb16d1fc11ab13d75cf5b1227e0480098b909bba50c4271b8
-def test_set_name_long34(backend, firmware, navigator, test_name, wallet_addr):
+def test_set_name_long34(backend, navigator, test_name, wallet_addr):
     data = "0xc47f00270000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000002241414141414141414141414141414141414141414141414141414141414141414242000000000000000000000000000000000000000000000000000000000000"
     run_test(
         contract_reverse_registrar, 
         data, 
         backend, 
-        firmware, 
         navigator, 
         test_name, 
         wallet_addr
     )
 
 # From : https://etherscan.io/tx/0x905e106763556d0cb16d1fc11ab13d75cf5b1227e0480098b909bba50c4271b8
-def test_set_name_long66(backend, firmware, navigator, test_name, wallet_addr):
+def test_set_name_long66(backend, navigator, test_name, wallet_addr):
     data = "0xc47f002700000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000042414141414141414141414141414141414141414141414141414141414141414142424242424242424242424242424242424242424242424242424242424242424343000000000000000000000000000000000000000000000000000000000000"
     run_test(
         contract_reverse_registrar, 
         data, 
         backend, 
-        firmware, 
         navigator, 
         test_name, 
         wallet_addr
     )
 
 # From : https://etherscan.io/tx/0x905e106763556d0cb16d1fc11ab13d75cf5b1227e0480098b909bba50c4271b8
-def test_set_name_long(backend, firmware, navigator, test_name, wallet_addr):
+def test_set_name_long(backend, navigator, test_name, wallet_addr):
     data = "0xc47f002700000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000054414141414141414141414141414141414141414141414141414141414141414142424242424242424242424242424242424242424242424242424242424242424444444443434343434343434343434343434343000000000000000000000000"
     run_test(
         contract_reverse_registrar, 
         data, 
         backend, 
-        firmware, 
         navigator, 
         test_name, 
         wallet_addr
     )
 
 # From : https://etherscan.io/tx/0x905e106763556d0cb16d1fc11ab13d75cf5b1227e0480098b909bba50c4271b8
-def test_set_name(backend, firmware, navigator, test_name, wallet_addr):
+def test_set_name(backend, navigator, test_name, wallet_addr):
     data = "0xc47f0027000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000076c75632e65746800000000000000000000000000000000000000000000000000"
     run_test(
         contract_reverse_registrar, 
         data, 
         backend, 
-        firmware, 
         navigator, 
         test_name, 
         wallet_addr
